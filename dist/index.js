@@ -53,3 +53,17 @@ const user1 = {
     id: 1,
     name: 'John',
 };
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+// Classes
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+const colby = new Person(1, "Colby Pearce");
+const natalie = new Person(2, "Natalie Pearce");
