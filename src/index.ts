@@ -1,19 +1,17 @@
 // BASIC TYPES
-
 let id: number = 5
 let company: string = 'Colby Pearce'
 let isPublished: boolean = true
 let x: any = 'Hello'
 let age: number
-
 let ids: number[] = [1, 2, 3, 4, 5]
 let arr: any[] = [1, 'yes', true]
 
 // Tuple
 let person: [number, string, boolean] = [1, 'Colby', false]
+
 // Tuple Array
 let employee: [number, string][]
-
 employee = [
   [1, 'Colby'],
   [2, 'Natalie'],
@@ -22,7 +20,6 @@ employee = [
 
 //Union
 //variable to hold more than one type
-
 let productId: string | number
 productId = 22
 
@@ -36,11 +33,44 @@ enum Direction1 {
 }
 
 // Objects
+type User = {
+    id: number,
+    name:string
+}
 
-const user: {
-  id: number
-  name: string
-} = {
+const user: User = {
+  id: 1,
+  name: 'John',
+}
+
+// Type assertion 
+let cid: any = 1
+// let customerId = <number>cid
+let customerId = cid as number
+
+// Functions
+// good idea to give your params a type
+// also give a type to the return value
+function addNum(x: number,y: number): number {
+    return x + y
+}
+console.log(addNum(3,5))
+
+// Void
+function log(message: string | number) : void {
+    console.log(message)
+}
+log("Colby")
+
+// Interface
+// can be used in very similar way as custom type
+// use when describing an object
+interface UserInterface{
+    id: number,
+    name:string
+}
+
+const user1: UserInterface = {
   id: 1,
   name: 'John',
 }

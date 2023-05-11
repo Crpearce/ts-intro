@@ -29,8 +29,27 @@ var Direction1;
     Direction1[Direction1["Left"] = 2] = "Left";
     Direction1[Direction1["Right"] = 3] = "Right";
 })(Direction1 || (Direction1 = {}));
-// Objects
 const user = {
+    id: 1,
+    name: 'John',
+};
+// Type assertion 
+let cid = 1;
+// let customerId = <number>cid
+let customerId = cid;
+// Functions
+// good idea to give your params a type
+// also give a type to the return value
+function addNum(x, y) {
+    return x + y;
+}
+console.log(addNum(3, 5));
+// Void
+function log(message) {
+    console.log(message);
+}
+log("Colby");
+const user1 = {
     id: 1,
     name: 'John',
 };
