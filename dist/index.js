@@ -67,3 +67,23 @@ class Person {
 }
 const colby = new Person(1, "Colby Pearce");
 const natalie = new Person(2, "Natalie Pearce");
+//This would be called a subclass since it Extends the Person class
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, "Tommy", 'Developer');
+console.log(emp);
+// since we have extendced the Person class from the Employee class we can also call register()
+console.log(emp.register());
+// Generics- used to build reusable components
+// Can use placeholders for whatever datatypes you want
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(['Brad', 'John', 'Joe']);
+strArray.push('hello');
+console.log(numArray);
